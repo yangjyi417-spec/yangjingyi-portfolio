@@ -1025,6 +1025,16 @@ document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return
 /* 作品预览：每个作品都是普通 <a href="files/xxx.pdf" target="_blank">，点击直接用浏览器
    内置 PDF 查看器在新标签打开（Chrome/Edge 同内核，免装插件、无 JS 拦截、作品集页面不跳走）。 */
 
+/* 微信/企业微信内置浏览器会静默拦截 target=_blank 的链接（点了没反应），
+   检测到微信环境就去掉 target，让链接在当前页面直接跳转打开。 */
+(function(){
+  var ua=(navigator.userAgent||'').toLowerCase();
+  if(/micromessenger|wxwork|wechat/.test(ua)){
+    document.querySelectorAll('a[target="_blank"]').forEach(function(a){a.removeAttribute('target');});
+  }
+})();
+
+
 </script>
 </body>
 </html>
