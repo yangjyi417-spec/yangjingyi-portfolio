@@ -980,7 +980,7 @@ function buildCarousels(){
     // desktop mouse drag
     let down=false,sx=0,sl=0;
     track.addEventListener('pointerdown',e=>{
-      if(e.target.closest('[data-src]'))return;
+      if(e.target.closest('[data-src],a,button'))return;
       down=true;sx=e.clientX;sl=track.scrollLeft;track.style.scrollSnapType='none';track.style.scrollBehavior='auto';
       try{track.setPointerCapture(e.pointerId);}catch(_){}
     });
