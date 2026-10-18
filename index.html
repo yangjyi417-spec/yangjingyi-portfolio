@@ -222,6 +222,17 @@ a{color:inherit;text-decoration:none}
 .car-dot.active{background:var(--grad2);width:28px;border-radius:100px}
 .car-hint{text-align:center;font-size:12px;color:var(--muted);margin-top:12px;font-family:'Space Grotesk',sans-serif;letter-spacing:1px}
 @media(max-width:700px){.car-btn{width:40px;height:40px;font-size:22px}.car-btn.prev{left:0}.car-btn.next{right:0}}
+
+/* Clickable work links (replaces dead in-image QRs) */
+.work-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.wlink{display:inline-flex;align-items:center;gap:7px;padding:10px 17px;border-radius:999px;font-size:13.5px;font-weight:700;text-decoration:none;color:#fff;background:var(--grad);box-shadow:0 6px 16px rgba(2,132,199,.26);transition:transform .2s,box-shadow .2s;white-space:nowrap;letter-spacing:.2px}
+.wlink:hover{transform:translateY(-2px);box-shadow:0 11px 24px rgba(2,132,199,.36)}
+.wlink .ic{font-size:14px}
+.wlink .ar{font-size:12px;opacity:.92}
+a.inl{color:var(--g4);text-decoration:none;font-weight:700;border-bottom:1.5px solid rgba(2,132,199,.3);transition:border-color .2s,color .2s}
+a.inl:hover{border-color:var(--g4);color:var(--g2)}
+a.inl .ar{font-size:.78em;margin-left:2px}
+@media(max-width:859px){.work-links{gap:9px}.wlink{padding:9px 15px;font-size:13px}}
 @media(min-width:860px){
   .section{padding:58px 32px 16px}
   .sec-head{margin-bottom:20px}
@@ -273,6 +284,18 @@ a{color:inherit;text-decoration:none}
 .lightbox{position:fixed;inset:0;z-index:300;background:rgba(8,6,16,.92);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:40px;opacity:0;transition:opacity .3s}
 .lightbox.open{display:flex;opacity:1}
 .lightbox img{max-width:92vw;max-height:86vh;border-radius:14px;box-shadow:var(--shadow);object-fit:contain}
+.pdfbox{position:fixed;inset:0;z-index:400;background:rgba(8,6,16,.94);backdrop-filter:blur(10px);display:none;flex-direction:column}
+.pdfbox.open{display:flex}
+.pdfbox-bar{display:flex;align-items:center;gap:14px;padding:12px 18px;color:#fff;background:rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.12)}
+.pdfbox-title{font-weight:600;font-size:15px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pdfbox-bar a.pdfbox-dl{color:#cfe3ff;font-size:13px;text-decoration:none;border:1px solid rgba(207,227,255,.4);padding:6px 12px;border-radius:999px;white-space:nowrap}
+.pdfbox-bar a.pdfbox-dl:hover{background:rgba(207,227,255,.14)}
+.pdfbox-close{background:rgba(255,255,255,.1);color:#fff;border:0;width:34px;height:34px;border-radius:50%;font-size:20px;line-height:1;cursor:pointer;flex:none}
+.pdfbox-close:hover{background:rgba(255,255,255,.22)}
+.pdfbox-scroll{flex:1;overflow:auto;background:#3a3a3f;padding:20px 12px}
+.pdfbox-scroll canvas{display:block;margin:0 auto 16px;max-width:100%;height:auto;background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.4);border-radius:4px}
+.pdfbox-status{color:#fff;text-align:center;padding:40px 20px;font-size:15px;opacity:.85}
+.pdfbox-tip{padding:8px 18px;color:rgba(255,255,255,.6);font-size:12px;text-align:center}
 .lb-close{position:absolute;top:24px;right:30px;font-size:34px;color:#fff;cursor:pointer;line-height:1;background:none;border:none}
 .lb-nav{position:absolute;top:50%;transform:translateY(-50%);font-size:40px;color:#fff;cursor:pointer;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);width:56px;height:56px;border-radius:50%;display:grid;place-items:center;transition:background .2s}
 .lb-nav:hover{background:rgba(255,255,255,.2)}
@@ -428,6 +451,7 @@ a{color:inherit;text-decoration:none}
     <div class="work-body">
       <p>以"智绘无界，想画可画"为主题，打造一系列富有创意和互动性的校园推广活动。通过线上线下相结合的方式，充分展示 Canva 可画魔力工作室的强大功能，激发学生的创作灵感，让设计变得触手可及。</p>
       <p><strong>核心逻辑：</strong>从"痛点共鸣"到"效果展示"，再到"技能赋能"，最终实现"习惯养成"，层层递进绑定用户心智。</p>
+      <div class="work-links"><a class="wlink" href="files/canva.pdf" target="_blank" rel="noopener"><span class="ic">📄</span>查看策划案原文<span class="ar">↗</span></a></div>
     </div>
     <div class="gal">
       <div class="gal-label">Full Page</div>
@@ -453,6 +477,7 @@ a{color:inherit;text-decoration:none}
     <div class="work-body">
       <p>洞察 AI 时代"碎片化 AI 工具"的用户困境，提出千问作为 AI 底层操作系统的核心价值——让千行百业从"千问"走向"一问即达"，覆盖从认知到口碑沉淀的完整传播闭环。</p>
       <p><em>《我有千问，只需一问》</em></p>
+      <div class="work-links"><a class="wlink" href="files/qianwen.pdf" target="_blank" rel="noopener"><span class="ic">📄</span>查看策划案原文<span class="ar">↗</span></a></div>
     </div>
     <div class="gal">
       <div class="gal-label">Full Page</div>
@@ -477,6 +502,7 @@ a{color:inherit;text-decoration:none}
     </div>
     <div class="work-body">
       <p>蓝信封 2026 年春季通信大使校园招募专场。通过线下沉浸式书信展、互动回信、测试打卡、现场报名四大模块，向高校学生传递蓝信封乡村儿童书信陪伴项目价值，吸引学生报名成为通信大使，建立长期一对一书信陪伴关系。</p>
+      <div class="work-links"><a class="wlink" href="files/lanxinfeng.pdf" target="_blank" rel="noopener"><span class="ic">📄</span>查看策划案＋总结<span class="ar">↗</span></a></div>
     </div>
     <div class="metrics">
       <div class="metric"><div class="metric-num">100</div><div class="metric-label">招募通信大使</div></div>
@@ -506,6 +532,7 @@ a{color:inherit;text-decoration:none}
     <div class="work-body">
       <p>为了实现传统红色旅游景点的年轻化，该策划深入挖掘红色历史资源，结合现代旅游理念，打造集教育、休闲、观光于一体的红色旅游胜地。</p>
       <p><strong>方法：</strong>采用"文化 + 体验式"的创新营销方式，借助 VR 等新兴技术和互联网的力量吸引更多年轻人参观，实现年轻化转型。</p>
+      <div class="work-links"><a class="wlink" href="files/shazhou.pdf" target="_blank" rel="noopener"><span class="ic">📄</span>查看完整方案<span class="ar">↗</span></a></div>
     </div>
     <div class="gal">
       <div class="gal-label">Full Page</div>
@@ -546,10 +573,10 @@ a{color:inherit;text-decoration:none}
     </div>
     <div class="work-body">
       <ul>
-        <li><strong>《扎根人民沃土 书写时代答卷》</strong>— 新时代青年践行马克思主义新闻观的知行探索 · 湖南省第三届高校大学生征文大赛 <em>三等奖</em></li>
-        <li><strong>《自然与人生的交响乐——〈草木人间〉读后感》</strong>— 湖南省一校一书阅读活动 <em>省级二等奖</em></li>
-        <li><strong>《静默如坛，回声如海》</strong>— 湖南工程学院一校一书阅读活动 <em>校级二等奖</em></li>
-        <li><strong>《红尘镜影，女儿心语织梦华》</strong>— 湖南工程学院读者协会征文比赛 <em>优胜奖</em></li>
+        <li><a class="inl" href="files/zhengwen-zhagen.pdf" target="_blank" rel="noopener"><strong>《扎根人民沃土 书写时代答卷》</strong><span class="ar">↗</span></a>— 新时代青年践行马克思主义新闻观的知行探索 · 湖南省第三届高校大学生征文大赛 <em>三等奖</em></li>
+        <li><a class="inl" href="files/zhengwen-caomu.pdf" target="_blank" rel="noopener"><strong>《自然与人生的交响乐——〈草木人间〉读后感》</strong><span class="ar">↗</span></a>— 湖南省一校一书阅读活动 <em>省级二等奖</em></li>
+        <li><a class="inl" href="files/zhengwen-jingmo.pdf" target="_blank" rel="noopener"><strong>《静默如坛，回声如海》</strong><span class="ar">↗</span></a>— 湖南工程学院一校一书阅读活动 <em>校级二等奖</em></li>
+        <li><a class="inl" href="files/zhengwen-hongchen.pdf" target="_blank" rel="noopener"><strong>《红尘镜影，女儿心语织梦华》</strong><span class="ar">↗</span></a>— 湖南工程学院读者协会征文比赛 <em>优胜奖</em></li>
       </ul>
     </div>
     <div class="gal">
@@ -607,8 +634,8 @@ a{color:inherit;text-decoration:none}
     <div class="work-body">
       <p>覆盖新闻、政务与校园三条写作线：</p>
       <ul>
-        <li><strong>政务稿件：</strong>《唐颖欣：探索数字与文化融合路径，用匠心筑就智慧课堂》</li>
-        <li><strong>校园稿件：</strong>《黄文娟：产教融合的践行者，学生成长的筑梦人》</li>
+        <li><strong>政务稿件：</strong><a class="inl" href="https://moment.rednet.cn/nograb/646047/67/15788304.html" target="_blank" rel="noopener">《唐颖欣：探索数字与文化融合路径，用匠心筑就智慧课堂》<span class="ar">↗</span></a>　·　红网发布</li>
+        <li><strong>校园稿件：</strong><a class="inl" href="https://moment.rednet.cn/nograb/646047/62/15801860.html" target="_blank" rel="noopener">《黄文娟：产教融合的践行者，学生成长的筑梦人》<span class="ar">↗</span></a>　·　红网发布</li>
       </ul>
     </div>
     <div class="gal">
@@ -639,6 +666,7 @@ a{color:inherit;text-decoration:none}
         <li><strong>高德扫街榜 · 烟火小店榜</strong>— 物料文案</li>
         <li><strong>高德扫街榜 · 热门好去处榜</strong>— 物料文案</li>
       </ul>
+      <div class="work-links"><a class="wlink" href="https://wxxcx.sao1sao.top/a/R2N50P0/" target="_blank" rel="noopener"><span class="ic">🎬</span>观看榜单宣传视频<span class="ar">↗</span></a></div>
     </div>
     <div class="gal">
       <div class="gal-label">Full Page</div>
@@ -696,6 +724,7 @@ a{color:inherit;text-decoration:none}
     </div>
     <div class="work-body">
       <p>账号以 Chiikawa 动漫中的飞鼠形象为创作基础，在原有动漫内容上截取片段进行组合并配以文字，文字部分与学生以及打工人群体心态类似，能够引起强烈共鸣。实现从选题到排期再到创作发布的全链路运营体系搭建。</p>
+      <div class="work-links"><a class="wlink" href="files/feishu-fupan.pdf" target="_blank" rel="noopener"><span class="ic">📊</span>查看运营复盘<span class="ar">↗</span></a><a class="wlink" href="https://v.douyin.com/mgoPzu3mHko/" target="_blank" rel="noopener"><span class="ic">🎵</span>抖音主页<span class="ar">↗</span></a><a class="wlink" href="https://weixin.qq.com/sph/AT8Y6XwpBV" target="_blank" rel="noopener"><span class="ic">📺</span>视频号 · 飞鼠妙妙屋<span class="ar">↗</span></a></div>
     </div>
     <div class="metrics">
       <div class="metric"><div class="metric-num">800+</div><div class="metric-label">视频号涨粉</div></div>
@@ -780,7 +809,9 @@ a{color:inherit;text-decoration:none}
         <div class="work-sub">Poster Design</div>
       </div>
     </div>
-    <div class="work-body"><p>明星物料设计、活动宣传海报与高德国庆广告海报，训练视觉层级与信息密度的把控。</p></div>
+    <div class="work-body"><p>明星物料设计、活动宣传海报与高德国庆广告海报，训练视觉层级与信息密度的把控。</p>
+      <div class="work-links"><a class="wlink" href="https://h5.lanxinfeng.cn?recommendId=1851940216926603" target="_blank" rel="noopener"><span class="ic">🔗</span>查看海报对应 H5<span class="ar">↗</span></a></div>
+    </div>
     <div class="gal">
       <div class="gal-label">Full Page</div>
       <div class="shot" data-group="p20" data-src="images/full/page_20.jpg"><img src="images/full/page_20.jpg" alt="海报作品整页" loading="lazy"><span class="zoom">点击放大</span></div>
@@ -802,7 +833,9 @@ a{color:inherit;text-decoration:none}
         <div class="work-sub">Magazine Layout · ID</div>
       </div>
     </div>
-    <div class="work-body"><p>杂志内页版式设计，练习图文节奏、留白与栅格系统的把控。</p></div>
+    <div class="work-body"><p>杂志内页版式设计，练习图文节奏、留白与栅格系统的把控。</p>
+      <div class="work-links"><a class="wlink" href="files/banshi.pdf" target="_blank" rel="noopener"><span class="ic">📄</span>查看版式设计作品<span class="ar">↗</span></a></div>
+    </div>
     <div class="gal">
       <div class="gal-label">Full Page</div>
       <div class="shot" data-group="p21" data-src="images/full/page_21.jpg"><img src="images/full/page_21.jpg" alt="杂志设计整页" loading="lazy"><span class="zoom">点击放大</span></div>
@@ -824,9 +857,9 @@ a{color:inherit;text-decoration:none}
     </div>
     <div class="work-body">
       <ul>
-        <li><strong>好东西</strong>— 电影预告片剪辑</li>
-        <li><strong>高德公共出行</strong>— 30s 广告</li>
-        <li><strong>古梵诗洗发水</strong>— 口播广告</li>
+        <li><a class="inl" href="https://wxxcx.sao1sao.top/a/R435pWK/" target="_blank" rel="noopener"><strong>好东西</strong><span class="ar">↗</span></a>— 电影预告片剪辑</li>
+        <li><a class="inl" href="https://wxxcx.sao1sao.top/a/O7wEzdM/" target="_blank" rel="noopener"><strong>高德公共出行</strong><span class="ar">↗</span></a>— 30s 广告</li>
+        <li><a class="inl" href="https://wxxcx.sao1sao.top/a/bJzKq2Z/" target="_blank" rel="noopener"><strong>古梵诗洗发水</strong><span class="ar">↗</span></a>— 口播广告</li>
       </ul>
     </div>
     <div class="gal">
@@ -863,6 +896,16 @@ a{color:inherit;text-decoration:none}
   <img id="lbImg" src="" alt="">
   <button class="lb-nav lb-next" id="lbNext">›</button>
   <div class="lb-count" id="lbCount"></div>
+</div>
+
+<!-- PDF viewer overlay (iframe → viewer.html) -->
+<div class="pdfbox" id="pdfbox">
+  <div class="pdfbox-bar">
+    <span class="pdfbox-title" id="pdfTitle">作品预览</span>
+    <a class="pdfbox-dl" id="pdfOpenTab" href="#" target="_blank" rel="noopener">新标签打开 ↗</a>
+    <button class="pdfbox-close" id="pdfClose" aria-label="关闭">×</button>
+  </div>
+  <iframe id="pdfFrame" title="作品预览" src="about:blank" style="flex:1;width:100%;border:0;background:#3a3a3f"></iframe>
 </div>
 
 <script>
@@ -978,6 +1021,10 @@ document.getElementById('lbPrev').onclick=()=>show(idx-1);
 document.getElementById('lbNext').onclick=()=>show(idx+1);
 lb.onclick=e=>{if(e.target===lb)close()};
 document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(idx-1);if(e.key==='ArrowRight')show(idx+1)});
+
+/* 作品预览：每个作品都是普通 <a href="files/xxx.pdf" target="_blank">，点击直接用浏览器
+   内置 PDF 查看器在新标签打开（Chrome/Edge 同内核，免装插件、无 JS 拦截、作品集页面不跳走）。 */
+
 </script>
 </body>
 </html>
