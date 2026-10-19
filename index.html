@@ -315,6 +315,9 @@ a.inl .ar{font-size:.78em;margin-left:2px}
       <a href="#writing">文案撰写</a>
       <a href="#media">新媒体运营</a>
       <a href="#design">设计展示</a>
+      <a href="#research">科研经历</a>
+      <a href="#webbuild">网站搭建</a>
+      <a href="#ai">AI 技能</a>
     </div>
   </div>
 </nav>
@@ -383,6 +386,17 @@ a.inl .ar{font-size:.78em;margin-left:2px}
             <li>用 AIGC 平台与 Canva 参与视频、Banner、开屏素材创意制作与渠道投放，支持高德地图"十一"节庆流量高峰素材适配。</li>
             <li>统筹多项目日 / 周投放预算，分析数据台账，为预算调整提供准确依据。</li>
           </ul>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2025.08 – 2025.09</div>
+          <span class="dot"></span>
+          <div class="role">邵阳市北塔区"传承红色基因·向国旗敬礼"主题实践活动 · 活动策划与宣传</div>
+          <ul>
+            <li>参与由北塔区委宣传部、区教育局、团区委联合主办的主题实践暨"全民国防教育月"活动的<strong>策划与宣传执行</strong>。</li>
+            <li>参与活动流程与现场环节设计：升国旗仪式流程、国防军事体验（真人 CS 对抗、国旗护卫队队列）、国旗护卫队培训与考勤制度等文本撰写。</li>
+            <li>输出完整活动方案（原件可点开查看），并配合区委宣传部做活动宣传报道与素材整理。</li>
+          </ul>
+          <div class="work-links"><a class="wlink" href="files/shaoyang-huodong.pdf" target="_blank" rel="noopener"><span class="ic">📄</span>查看活动策划案原件<span class="ar">↗</span></a></div>
         </div>
         <div class="tl-item">
           <div class="tl-date">2025.06 – 2025.09</div>
@@ -871,6 +885,219 @@ a.inl .ar{font-size:.78em;margin-left:2px}
         <div class="thumb" data-group="p22d" data-src="images/detail/p22_02.jpg"><img src="images/detail/p22_02.jpg" alt="视频 02" loading="lazy"></div>
         <div class="thumb" data-group="p22d" data-src="images/detail/p22_03.jpg"><img src="images/detail/p22_03.jpg" alt="视频 03" loading="lazy"></div>
         <div class="thumb" data-group="p22d" data-src="images/detail/p22_04.jpg"><img src="images/detail/p22_04.jpg" alt="视频 04" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ===== Research ===== */
+.rs-card{background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius);box-shadow:var(--shadow);padding:30px 32px;margin-bottom:22px;backdrop-filter:blur(8px)}
+.rs-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.rs-badge{background:var(--grad);color:#fff;font-size:13px;font-weight:700;padding:5px 14px;border-radius:100px;letter-spacing:.5px}
+.rs-journal{color:var(--muted);font-size:14px}
+.rs-title{font-size:20px;font-weight:700;line-height:1.4;color:var(--ink)}
+.rs-title-cn{color:var(--ink-soft);font-size:15px;margin-top:4px;font-weight:500}
+.rs-abs{color:var(--ink-soft);font-size:15px;margin-top:14px;line-height:1.85}
+.rs-meta{margin-top:16px;display:grid;gap:8px;font-size:14px;color:var(--ink-soft)}
+.rs-meta .mk{display:inline-block;min-width:64px;color:var(--g4);font-weight:700}
+.paper-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.paper-card{background:var(--card);border:1px solid var(--card-border);border-radius:18px;padding:22px;box-shadow:var(--shadow);transition:transform .3s}
+.paper-card:hover{transform:translateY(-4px)}
+.paper-card h4{font-size:16px;margin:10px 0 8px;line-height:1.45}
+.paper-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.8}
+.paper-tag{font-size:12px;font-weight:700;padding:3px 10px;border-radius:100px;color:#fff}
+.paper-tag.ei{background:#0D9488}.paper-tag.conf{background:#0EA5E9}.paper-tag.res{background:#60A5FA}
+.paper-role{margin-top:12px;font-size:13px;color:var(--g4);font-weight:600}
+/* ===== Web build ===== */
+.wb-intro{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+.wb-point{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:18px 20px;font-size:14px;color:var(--ink-soft);line-height:1.8;box-shadow:var(--shadow)}
+.wb-point b{display:block;color:var(--ink);font-size:15px;margin-bottom:4px}
+.ia{background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius);box-shadow:var(--shadow);padding:34px 26px}
+.ia-root{width:max-content;max-width:100%;margin:0 auto;background:var(--grad);color:#fff;font-weight:700;font-size:16px;padding:12px 26px;border-radius:100px;box-shadow:0 10px 24px rgba(14,110,180,.28)}
+.ia-cols{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:26px}
+.ia-col{background:var(--bg2);border:1px solid var(--card-border);border-radius:14px;padding:14px 12px;position:relative}
+.ia-h{font-size:13.5px;font-weight:700;color:var(--g4);text-align:center;padding-bottom:8px;margin-bottom:8px;border-bottom:1px dashed var(--card-border)}
+.ia-col ul{list-style:none;display:grid;gap:6px}
+.ia-col li{font-size:12.5px;color:var(--ink-soft);text-align:center;line-height:1.5}
+/* ===== AI ===== */
+.ai-tools{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.ai-tool{background:var(--card);border:1px solid var(--card-border);border-radius:100px;padding:8px 18px;font-size:14px;font-weight:600;color:var(--ink-soft);box-shadow:var(--shadow)}
+.ai-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:30px}
+.ai-step{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:18px 16px;box-shadow:var(--shadow)}
+.ai-n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--grad);color:#fff;font-weight:700;font-size:14px;margin-bottom:10px}
+.ai-step b{display:block;font-size:15px;margin-bottom:5px}
+.ai-step p{font-size:12.5px;color:var(--ink-soft);line-height:1.7}
+.ai-sub{font-size:18px;font-weight:700;margin:6px 0 18px;color:var(--ink)}
+.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ai-card{background:var(--card);border:1px solid var(--card-border);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);transition:transform .3s}
+.ai-card:hover{transform:translateY(-5px)}
+.ai-cover{aspect-ratio:16/10;background:var(--bg2);overflow:hidden}
+.ai-cover img{width:100%;height:100%;object-fit:cover}
+.ai-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#fff}
+.ai-ph .ai-ph-ic{font-size:40px}
+.ai-ph .ai-ph-t{font-size:15px;font-weight:700;letter-spacing:.5px}
+.ph-nyota{background:linear-gradient(135deg,#34D399,#0D9488)}
+.ph-ad{background:linear-gradient(135deg,#38BDF8,#4338CA)}
+.ph-story{background:linear-gradient(135deg,#F59E0B,#EF4444)}
+.ai-body{padding:16px 18px 20px}
+.ai-name{font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.ai-tag{font-size:11px;font-weight:600;color:var(--g4);background:rgba(14,165,233,.12);padding:2px 9px;border-radius:100px}
+.ai-desc{font-size:13.5px;color:var(--ink-soft);line-height:1.75;margin-bottom:12px}
+.ai-btn{display:inline-block;font-size:13px;font-weight:600;color:#fff;background:var(--grad2);padding:7px 16px;border-radius:100px;transition:filter .2s}
+.ai-btn:hover{filter:brightness(1.06)}
+@media (max-width:900px){
+  .paper-grid,.wb-intro,.ai-grid{grid-template-columns:1fr 1fr}
+  .ai-flow{grid-template-columns:1fr 1fr 1fr}
+  .ia-cols{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:600px){
+  .paper-grid,.wb-intro,.ai-grid,.ai-flow{grid-template-columns:1fr}
+  .ia-cols{grid-template-columns:1fr 1fr}
+}
+</style>
+
+<!-- 05 科研经历 -->
+<section class="section" id="research">
+  <div class="sec-head reveal">
+    <div class="sec-kicker"><span class="n">05</span> Research</div>
+    <h2 class="sec-title">科研<span class="grad">经历</span></h2>
+    <p class="sec-desc">与导师、同学长期协作完成多篇论文——把广告学的问题意识，带进真实的研究里。</p>
+  </div>
+
+  <div class="rs-card reveal">
+    <div class="rs-top">
+      <span class="rs-badge">在审 · JCR Q2</span>
+      <span class="rs-journal">期刊：Continuum（Taylor &amp; Francis）· Original Article</span>
+    </div>
+    <h3 class="rs-title">Humanizing the Algorithm: AIGC, the Labor Process, and the Dual Character of Creative Judgment in Chinese Advertising Production</h3>
+    <p class="rs-title-cn">《让人工智能人性化：AIGC、劳动过程与中国广告生产中创意判断的双重性》</p>
+    <p class="rs-abs">研究基于 2024–2025 年中国南方（长沙、广州、株洲）多家小型广告公司的民族志田野，通过参与式观察与半结构化访谈收集材料。论文提出"人类化劳动（humanization labor）"概念——劳动者把算法生成的"近似"素材加工成文化得体、审美统一、语境有效的成品，具体表现为<strong>审美修复、文化—政治合规、情感—语义校准</strong>三种形态。研究指出它具有双重性：既体现算法难以复制的创意自主，又在压缩工期、价格侵蚀与商业不可见性中强化了劳动控制，为劳动过程理论提供了来自中国文化生产现场的新证据。</p>
+    <div class="rs-meta">
+      <div><span class="mk">作者</span>与导师及同学共 5 人合作（湖南工程学院）· 本人第三作者</div>
+      <div><span class="mk">方法</span>民族志 · 参与式观察 · 半结构化访谈 · 劳动过程理论</div>
+      <div><span class="mk">我的分工</span>文献梳理、访谈整理与初稿撰写</div>
+    </div>
+  </div>
+
+  <div class="paper-grid reveal">
+    <div class="paper-card">
+      <span class="paper-tag ei">EI 收录</span>
+      <h4>STGCN-LSTM for Olympic Medal Prediction</h4>
+      <p>提出 STGCN-LSTM 混合模型预测奥运奖牌分布：时空图卷积网络捕捉国家间的地理与互动关系（教练流动、社会经济联系），LSTM 建模历史成绩与经济、人口数据的长期趋势，并用零膨胀复合泊松（ZICP）框架区分"结构性零"与"随机零"。多校交叉合作（新疆大学 / 深圳 X-Institute / 四川大学 / 港理工 / 宁波诺丁汉 等）。</p>
+      <div class="paper-role">我的分工：数据处理与图表可视化</div>
+    </div>
+    <div class="paper-card">
+      <span class="paper-tag conf">已发表 · 会议论文</span>
+      <h4>基于"提示工程"的非遗微短剧本创作框架研究与传播</h4>
+      <p>针对非遗（以湘西非遗为样本）题材微短剧"创作门槛高、文化表达表层化、生产周期与市场节奏不匹配"的现实困境，立足品牌传播与内容营销视角，提出一套基于大语言模型（LLM）的标准化"提示工程"叙事建构框架——以信息架构与受众洞察为理论核心，通过分层化、模块化的提示词设计，把非遗文化元素转化为模型可识别、可生成的结构化指令，让创作者与 AI 高效协同，兼顾创作效率与文化表达的准确性，为非遗的数字化传播提供方法论路径。</p>
+      <div class="paper-role">我的分工：独立完成选题、框架构建与全文撰写</div>
+      <a class="wlink" href="files/feiyi-paper.pdf" target="_blank" rel="noopener">查看论文原文 ↗</a>
+    </div>
+    <div class="paper-card">
+      <span class="paper-tag res">投稿在审</span>
+      <h4>"家"的观念与中国城市青年消费</h4>
+      <p>以近年中国房地产动荡（恒大危机、"烂尾楼"、青年"躺平"）为背景，聚焦中小城镇与农村出身、中低收入的城市青年，考察儒家"成家立业"传统观念与当代现实之间的张力；以 B 站相关广告与品牌内容为语料，采用多模态话语分析，探讨"家"的意义在青年消费与文化认同中的重构。</p>
+      <div class="paper-role">我的分工：前期数据调研与信息搜集，并参与撰写</div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 网站搭建 -->
+<section class="section" id="webbuild">
+  <div class="sec-head reveal">
+    <div class="sec-kicker"><span class="n">06</span> Web Build</div>
+    <h2 class="sec-title">网站<span class="grad">搭建</span></h2>
+    <p class="sec-desc">浙江亿日气动科技官网搭建——我负责建站前的需求梳理、全站信息架构设计与建站供应商比稿。</p>
+  </div>
+  <div class="wb-intro reveal">
+    <div class="wb-point"><b>需求梳理</b>协助团队明确官网核心目标，完成目标用户画像与竞品分析，把气动元件产品线、行业应用与资质证书等素材整理成结构化的功能需求清单。</div>
+    <div class="wb-point"><b>信息架构</b>规划全站栏目与页面层级——首页、产品（Air Treatment / Valves / Actuators / Fittings &amp; Tubing / Accessories 五大类）、解决方案（汽车 / 工业自动化 / 医疗）、支持与服务、联络、整合制造，并逐栏梳理待收集素材（见下图）。</div>
+    <div class="wb-point"><b>供应商比稿</b>从服务内容、参考案例、还原度、报价、服务器与域名、后续维护六个维度，横向评估两家建站方（上海互橙 vs 浙悉建站出海服务），形成比稿结论供决策。</div>
+  </div>
+  <div class="ia reveal">
+    <div class="ia-root">亿日气动 · 官网信息架构</div>
+    <div class="ia-cols">
+      <div class="ia-col"><div class="ia-h">首页 Home</div><ul><li>品牌首屏</li><li>企业实力</li><li>新闻动态</li></ul></div>
+      <div class="ia-col"><div class="ia-h">产品 Product</div><ul><li>Air Treatment</li><li>Valves</li><li>Actuators</li><li>Fittings &amp; Tubing</li><li>Accessories</li></ul></div>
+      <div class="ia-col"><div class="ia-h">解决方案 Solution</div><ul><li>汽车 Automobile</li><li>工业自动化</li><li>医疗 Life Science</li></ul></div>
+      <div class="ia-col"><div class="ia-h">支持与服务 Support</div><ul><li>2D / 3D CAD 文件</li><li>安装手册 Manual</li><li>证书 Certification</li></ul></div>
+      <div class="ia-col"><div class="ia-h">联络 Contact</div><ul><li>联系方式 / 留言</li><li>销售网络</li></ul></div>
+      <div class="ia-col"><div class="ia-h">整合制造</div><ul><li>制造流程</li><li>质量 Quality</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 AI 技能 -->
+<section class="section" id="ai">
+  <div class="sec-head reveal">
+    <div class="sec-kicker"><span class="n">07</span> AI Skills</div>
+    <h2 class="sec-title">AI<span class="grad"> 技能</span></h2>
+    <p class="sec-desc">不是"会用 AI"，而是有一套稳定、可复制的 AI 工作流——并用它独立做出了能跑起来的作品。</p>
+  </div>
+
+  <div class="ai-tools reveal">
+    <span class="ai-tool">通义千问</span>
+    <span class="ai-tool">Coze 扣子空间</span>
+    <span class="ai-tool">Midjourney</span>
+    <span class="ai-tool">ChatGPT</span>
+    <span class="ai-tool">Canva 可画</span>
+  </div>
+
+  <div class="ai-flow reveal">
+    <div class="ai-step"><span class="ai-n">1</span><div><b>发散与结构化</b><p>用通义千问 / ChatGPT 做选题发散、资料梳理与框架搭建，把一个模糊的想法拆成清晰的层级结构（如活动策划、论文大纲、网站信息架构）。</p></div></div>
+    <div class="ai-step"><span class="ai-n">2</span><div><b>分层 / 模块化提示词</b><p>把需求翻译成可复用、分层的提示词——拆出角色、任务、约束与输出格式，让同一次生成能稳定复现，而不是一次性碰运气。</p></div></div>
+    <div class="ai-step"><span class="ai-n">3</span><div><b>生成初稿</b><p>快速产出文案、图像或可交互的网页原型。图像用 Midjourney / 可画，应用与智能体用 Coze、秒哒一句话起稿，先拿到能看能点的骨架。</p></div></div>
+    <div class="ai-step"><span class="ai-n">4</span><div><b>人工把关</b><p>把"能用"的 AI 产出打磨到"能交付"：审美修复、文化与合规校对、语义校准、事实核验——这一步 AI 替代不了，也是作品真正的分水岭。</p></div></div>
+    <div class="ai-step"><span class="ai-n">5</span><div><b>沉淀模板</b><p>把跑通的提示词与流程固化成模板、智能体和工作流，下次同类任务直接调用，越用越快，也越用越稳。</p></div></div>
+  </div>
+
+  <div class="ai-sub reveal">我用 AI 独立搭建的作品</div>
+  <div class="ai-grid reveal">
+    <div class="ai-card">
+      <div class="ai-cover"><img src="images/ai-voxel.jpg" alt="像素方块世界" loading="lazy"></div>
+      <div class="ai-body">
+        <div class="ai-name">像素方块世界 <span class="ai-tag">网页应用</span></div>
+        <p class="ai-desc">用自然语言一句话生成的 3D 方块沙盒网页：Three.js 搭建第一人称视角，可自由放置 / 破坏方块、漫游建造，世界中央还用方块拼出了"COZE"字样。从提示词到可玩场景全程由 AI 生成，再手动微调交互与镜头。</p>
+        <a class="ai-btn" href="https://zkgwr4q3hq.coze.site" target="_blank" rel="noopener">在线体验 ↗</a>
+      </div>
+    </div>
+    <div class="ai-card">
+      <div class="ai-cover"><img src="images/ai-yuyin.jpg" alt="会画画的语音记事本" loading="lazy"></div>
+      <div class="ai-body">
+        <div class="ai-name">会画画的语音记事本 <span class="ai-tag">智能体</span></div>
+        <p class="ai-desc">面向老人陪伴与阿尔茨海默症关怀的智能体：老人口述一段往事，AI 边听边归纳要点，再自动生成一页配插画的记忆绘本，可保存、可分享给家人。让"说不清、记不住"的故事被真正"画"下来。</p>
+        <a class="ai-btn" href="https://app-956ckos7r9j5.appmiaoda.com/" target="_blank" rel="noopener">在线体验 ↗</a>
+      </div>
+    </div>
+    <div class="ai-card">
+      <div class="ai-cover"><img src="images/ai-tongxin.jpg" alt="通信大使特质测试" loading="lazy"></div>
+      <div class="ai-body">
+        <div class="ai-name">通信大使特质测试 <span class="ai-tag">互动网页</span></div>
+        <p class="ai-desc">为"蓝信封"书信陪伴公益设计的互动测评：12 道情境化题目，从表达、倾听、共情等维度测出你的"通信大使"沟通风格并给出个性化建议。题库、判分逻辑与结果文案都由 AI 生成后再逐条打磨。</p>
+        <a class="ai-btn" href="https://app-bipvlhb1ue4h.appmiaoda.com/" target="_blank" rel="noopener">在线体验 ↗</a>
+      </div>
+    </div>
+    <div class="ai-card">
+      <div class="ai-cover"><img src="images/ai-nyota.jpg" alt="Nyota 慢游世界" loading="lazy"></div>
+      <div class="ai-body">
+        <div class="ai-name">Nyota 慢游世界 <span class="ai-tag">网页应用</span></div>
+        <p class="ai-desc">为 POP MART 旗下 Nyota IP 独立完成的治愈系互动 H5：以"自在放空，慢游生活"为主题，用开场动画与"晨间治愈 / 午后放空 / 夜晚疗愈"的慢生活叙事配轻柔 BGM，带用户一点点找回生活的松弛感，再加入 Nyota 翻翻乐配对、漫游收藏家与手办解锁等轻互动。从主题策划、文案到用 Coze 搭建上线，全程独立完成。</p>
+        <a class="ai-btn" href="https://7pxhwp66w8.coze.site" target="_blank" rel="noopener">在线体验 ↗</a>
+      </div>
+    </div>
+    <div class="ai-card">
+      <div class="ai-cover"><img src="images/ai-hotspot.jpg" alt="热点广告分析平台" loading="lazy"></div>
+      <div class="ai-body">
+        <div class="ai-name">热点广告分析技能网站 <span class="ai-tag">技能 · 网页</span></div>
+        <p class="ai-desc">把"刷热点"变成方法论的技能型网页：抓取多平台实时热点，再用 AI 从传播、受众、创意、媒介适配等 12 个广告学维度自动拆解，一键生成可交互的分析报告，帮自己快速判断一个选题值不值得跟。</p>
+      </div>
+    </div>
+    <div class="ai-card">
+      <div class="ai-cover"><img src="images/ai-daiji.jpg" alt="代际 AI 故事绘本助手" loading="lazy"></div>
+      <div class="ai-body">
+        <div class="ai-name">代际 AI 故事绘本助手 <span class="ai-tag">智能体</span></div>
+        <p class="ai-desc">由多智能体分工协作完成的故事绘本助手："采访者"引导提问、"转化者"把口语往事改写成连贯叙事、"插画师"逐段生成画面，三环接力把一段家族记忆做成给孩子看的绘本，探索代际之间用 AI 传承口述历史的可能。</p>
       </div>
     </div>
   </div>
