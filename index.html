@@ -126,8 +126,8 @@ a{color:inherit;text-decoration:none}
 .intern li::before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;border-radius:3px;background:var(--grad2);transform:rotate(45deg)}
 .intern li strong{color:var(--ink);font-weight:600}
 .exp-title{font-size:13px;letter-spacing:2px;color:var(--g4);font-weight:700;text-transform:uppercase;margin:2px 0 26px}
-.timeline{display:flex;gap:14px;overflow-x:auto;padding:2px 2px 12px;scroll-snap-type:x proximity;scrollbar-width:thin}
-.tl-item{position:relative;flex:1 0 180px;min-width:180px;scroll-snap-align:start;padding-top:50px}
+.timeline{display:flex;gap:14px;overflow:visible;padding:2px 2px 12px}
+.tl-item{position:relative;flex:1 1 0;min-width:0;padding-top:50px}
 .tl-item .tl-date{position:absolute;top:2px;left:0;font-family:'Space Grotesk',sans-serif;font-size:12.5px;font-weight:700;color:var(--g4);letter-spacing:.3px;white-space:nowrap}
 .tl-item .dot{position:absolute;top:28px;left:0;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--g4);box-shadow:0 0 0 4px rgba(14,165,233,.14);z-index:2}
 .tl-item::before{content:"";position:absolute;top:34px;left:7px;right:-14px;height:2px;background:linear-gradient(90deg,rgba(14,165,233,.55),rgba(56,189,248,.55));z-index:1}
@@ -137,7 +137,15 @@ a{color:inherit;text-decoration:none}
 .tl-item li{position:relative;padding-left:15px;font-size:12.8px;line-height:1.55;color:var(--ink-soft)}
 .tl-item li::before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:50%;background:var(--grad2)}
 .tl-item li strong{color:var(--ink);font-weight:600}
-@media(max-width:860px){.timeline{scrollbar-width:none}.timeline::-webkit-scrollbar{height:6px}.timeline::-webkit-scrollbar-thumb{background:rgba(14,110,180,.28);border-radius:100px}}
+@media(max-width:860px){
+  .timeline{flex-direction:column;overflow:visible;gap:0;scroll-snap-type:none;scrollbar-width:none}
+  .tl-item{flex:none;min-width:0;width:100%;padding-top:0;padding-left:26px;margin-bottom:26px;scroll-snap-align:none}
+  .tl-item:last-child{margin-bottom:0}
+  .tl-item .tl-date{position:static;display:block;margin-bottom:6px}
+  .tl-item .dot{top:3px;left:0}
+  .tl-item::before{top:18px;left:6px;right:auto;bottom:-26px;width:2px;height:auto;background:linear-gradient(180deg,rgba(14,165,233,.55),rgba(56,189,248,.55))}
+  .tl-item:last-child::before{display:none}
+}
 
 /* Award strip */
 .awards{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px}
@@ -390,13 +398,12 @@ a.inl .ar{font-size:.78em;margin-left:2px}
         <div class="tl-item">
           <div class="tl-date">2025.08 – 2025.09</div>
           <span class="dot"></span>
-          <div class="role">邵阳市北塔区"传承红色基因·向国旗敬礼"主题实践活动 · 活动策划与宣传</div>
+          <div class="role">邵阳市北塔区"传承红色基因·向国旗敬礼"主题实践活动 · 活动策划</div>
           <ul>
-            <li>参与由北塔区委宣传部、区教育局、团区委联合主办的主题实践暨"全民国防教育月"活动的<strong>策划与宣传执行</strong>。</li>
+            <li>参与由北塔区委宣传部、区教育局、团区委联合主办的主题实践暨"全民国防教育月"活动的<strong>策划</strong>工作。</li>
             <li>参与活动流程与现场环节设计：升国旗仪式流程、国防军事体验（真人 CS 对抗、国旗护卫队队列）、国旗护卫队培训与考勤制度等文本撰写。</li>
-            <li>输出完整活动方案（原件可点开查看），并配合区委宣传部做活动宣传报道与素材整理。</li>
+            <li>负责活动整体方案文本的梳理与撰写。</li>
           </ul>
-          <div class="work-links"><a class="wlink" href="files/shaoyang-huodong.pdf" target="_blank" rel="noopener"><span class="ic">📄</span>查看活动策划案原件<span class="ar">↗</span></a></div>
         </div>
         <div class="tl-item">
           <div class="tl-date">2025.06 – 2025.09</div>
@@ -1223,7 +1230,7 @@ function buildCarousels(){
     update();
   });
 }
-buildCarousels();
+document.querySelectorAll('section.section > .work').forEach(restructureWork);
 
 // scroll-spy nav
 const links=[...document.querySelectorAll('.nav-links a')];
