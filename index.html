@@ -200,16 +200,16 @@ a{color:inherit;text-decoration:none}
 .thumb::after{content:"⤢";position:absolute;inset:0;display:grid;place-items:center;font-size:22px;color:#fff;opacity:0;background:rgba(0,0,0,.3);transition:opacity .3s}
 .thumb:hover::after{opacity:1}
 
-/* Desktop: compact one-screen-per-work (text left, image right, image shrinks to fit) */
+/* Desktop: compact two-column work (text left, image right); height fits content so nothing clips */
 @media(min-width:861px){
-  .work{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);grid-template-rows:auto minmax(0,1fr);column-gap:36px;row-gap:2px;align-items:stretch;height:min(72vh,560px);padding:26px 32px}
+  .work{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);grid-template-rows:auto auto;column-gap:36px;row-gap:2px;align-items:start;padding:26px 32px}
   .work > .work-head{grid-column:1 / -1;grid-row:1;margin-bottom:14px}
-  .work-main{grid-column:1;grid-row:2;margin-top:0;min-height:0;overflow:hidden}
-  .work-side{grid-column:2;grid-row:2;margin-top:0;min-height:0;overflow:hidden}
-  .work-side .gal{margin-top:0;height:100%;display:flex;flex-direction:column;gap:10px}
+  .work-main{grid-column:1;grid-row:2;margin-top:0;min-width:0}
+  .work-side{grid-column:2;grid-row:2;margin-top:0;min-width:0}
+  .work-side .gal{margin-top:0;display:flex;flex-direction:column;gap:10px}
   .work-side .gal-label{flex:0 0 auto;margin-bottom:0}
-  .work-side .shot{flex:1 1 auto;min-height:0}
-  .work-side .shot img{width:100%;height:100%;max-height:none;object-fit:contain}
+  .work-side .shot{flex:0 0 auto}
+  .work-side .shot img{width:100%;height:auto;max-height:min(46vh,420px);object-fit:contain}
   .work-side .thumbs{flex:0 0 auto;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px}
   .work-side .thumb{aspect-ratio:4/3}
   .work-side .thumb.portrait{aspect-ratio:9/16}
@@ -788,9 +788,9 @@ a.inl .ar{font-size:.78em;margin-left:2px}
       </div>
     </div>
     <div class="work-body">
-      <p><strong>01 本地生活探店 + 日常生活：</strong>自媒体生活账号，偏休闲性质，会接置换商单。</p>
-      <p><strong>02 招募 / 知识类：</strong>主要做蓝信封招募工作，组建社群，引流至微信并转化为用户。</p>
-      <p><strong>03 个护推广：</strong>纯广告性质的账号，做爆款拆分创新工作。</p>
+      <p><strong>01 本地生活探店 + 日常生活：</strong>以湘潭大学学生的真实身份探店并发布安利帖，用「到店拍摄 + 用餐体验评价」的内容置换商单，单篇笔记为门店带来 2w+ 浏览量；同时经营宿舍生活内容，凭一条大学宿舍改造帖接到床上桌品牌的置换合作，把日常场景做成了可持续产出的内容。</p>
+      <p><strong>02 知识 / 招募类：</strong>围绕大学生活做实用干货——提升综测的方法、值得参与的志愿活动、学科竞赛经验分享等，用「有用、可执行」的内容带动高互动与收藏；同时承担蓝信封公益项目的招募，从内容引流到社群组建，把公域关注沉淀到微信并转化为用户。</p>
+      <p><strong>03 个护推广（企业广告）：</strong>纯商业属性的种草账号，从品牌样品到手后自主完成选品拍摄、卖点提炼与文案撰写，发布「真实体验感」种草笔记，把产品卖点翻译成能打动目标用户的推荐语言。</p>
     </div>
     <div class="gal">
       <div class="gal-label">Full Page</div>
